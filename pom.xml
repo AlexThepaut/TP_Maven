@@ -16,6 +16,30 @@
 	<mode>DEV</mode>
   </properties>
 
+	<profiles>
+		<profile>
+			<id>dev</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<mode>DEV</mode>
+			</properties>
+		</profile>
+		<profile>
+			<id>prod</id>
+			<properties>
+				<mode>PROD</mode>
+			</properties>
+		</profile>
+		<profile>
+			<id>master</id>
+			<properties>
+				<mode>MASTER</mode>
+			</properties>
+		</profile>
+	</profiles>
+
   <build>
     <finalName>${project.artifactId}</finalName>
     <resources>
