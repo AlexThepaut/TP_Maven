@@ -12,15 +12,19 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <junit.version>3.8.1</junit.version>
+	<mode>DEV</mode>
   </properties>
 
   <build>
     <finalName>${project.artifactId}</finalName>
+    <resources>
+		<resource>
+			<directory>src/main/resources</directory>
+			<filtering>true</filtering>
+		</resource>
+	</resources>
     <plugins>
-    	<plugin>
-			<groupId>org.apache.maven.plugins</groupId>
-			<artifactId>maven-jar-plugin</artifactId>
-		</plugin>
 		<!-- configuration du plugin shade -->
 		<plugin>
 			<groupId>org.apache.maven.plugins</groupId>
